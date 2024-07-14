@@ -21,6 +21,7 @@ class SearchTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         setupNavigationBar()
         observeForm()
         tableView.reloadData()

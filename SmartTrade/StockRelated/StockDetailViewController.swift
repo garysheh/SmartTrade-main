@@ -29,20 +29,19 @@ class StockDetailViewController: UIViewController {
     @IBOutlet weak var oneHour: UILabel!
     @IBOutlet weak var starButton: UIButton!
     
-    
-    
     var stockSymbol: String?
     var stockData: SearchResult?
     private var cancellables = Set<AnyCancellable>()
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             setupRoundedLabel(labels: [oneDay, oneWeek, oneMonth, thirtyMintues, oneHour])
             setupTapGestures()
-            
             if let stockSymbol = stockSymbol {
                 fetchStockDetails(for: stockSymbol)
             }
+            updateStarIcon()
         }
         
         private func fetchStockDetails(for symbol: String) {
@@ -419,7 +418,54 @@ class StockDetailViewController: UIViewController {
 //        showSellOptionPopup()
     }
     
-
+    @IBAction func clickStarIcon(_ sender: Any) {
+        guard let stockSymbol = stockSymbol else { return }
+                addToWatchlist(stockSymbol: stockSymbol)
+        self.starButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+    }
+    
+    private func addToWatchlist(stockSymbol: String) {
+            guard let email = Auth.auth().currentUser?.email else {
+                print("Error: email is nil")
+                return
+            }
+            
+            let db = Firestore.firestore()
+            let docRef = db.collection("Watchlist").document(email)
+            
+            docRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    if var watchlist = document.data()?["watchlist"] as? [String] {
+                        if !watchlist.contains(stockSymbol) {
+                            watchlist.append(stockSymbol)
+                            docRef.updateData(["watchlist": watchlist]) { err in
+                                if let err = err {
+                                    print("Error updating document: \(err)")
+                                } else {
+                                    print("Document successfully updated")
+                                    DispatchQueue.main.async {
+                                        self.starButton.tintColor = .yellow
+                                    }
+                                }
+                            }
+                        } else {
+                            print("Stock symbol already in watchlist")
+                        }
+                    }
+                } else {
+                    docRef.setData(["watchlist": [stockSymbol]]) { err in
+                        if let err = err {
+                            print("Error writing document: \(err)")
+                        } else {
+                            print("Document successfully written!")
+                            DispatchQueue.main.async {
+                                self.starButton.tintColor = .yellow
+                            }
+                        }
+                    }
+                }
+            }
+        }
     
     //add symbol stockSymbol
     private func addSymbol() {
@@ -452,6 +498,36 @@ class StockDetailViewController: UIViewController {
             }
         }
     }
+    
+    private func updateStarIcon() {
+            guard let stockSymbol = stockSymbol, let email = Auth.auth().currentUser?.email else {
+                starButton.setImage(UIImage(systemName: "star"), for: .normal)
+                return
+            }
+            
+            let db = Firestore.firestore()
+            let docRef = db.collection("Watchlist").document(email)
+            
+            docRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    if let watchlist = document.data()?["watchlist"] as? [String], watchlist.contains(stockSymbol) {
+                        DispatchQueue.main.async {
+                            self.starButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            self.starButton.setImage(UIImage(systemName: "star"), for: .normal)
+                        }
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.starButton.setImage(UIImage(systemName: "star"), for: .normal)
+                    }
+                }
+            }
+        }
+    
+    
     
     
     

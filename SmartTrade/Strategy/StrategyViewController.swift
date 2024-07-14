@@ -53,7 +53,7 @@ class StrategyViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     private func performSearch() {
-            let symbols = ["TSLA", "LI"]
+            let symbols = ["AWK", "PODD"]
             let publishers = symbols.map { symbol -> AnyPublisher<(SearchResult?, [Double]), Error> in
                 let symbolPublisher = apiService.fetchSymbolsPublisher(symbol: symbol)
                     .map { data -> SearchResult? in
@@ -102,8 +102,10 @@ class StrategyViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(identifier: "StockDetailViewController") as? StockDetailViewController {
             let selectedStock = searchResults[indexPath.row]
-                        vc.stockData = selectedStock
+            vc.stockSymbol = selectedStock.symbol
+            vc.stockData = selectedStock
             self.navigationController?.pushViewController(vc, animated: true)
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }

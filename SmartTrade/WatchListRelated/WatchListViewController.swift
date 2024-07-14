@@ -18,12 +18,17 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var searchButton: UIButton!
     
+    @IBOutlet weak var editList: UIButton!
+    
+    @IBOutlet weak var addSymbol: UIButton!
+    
+    
     private let apiService = APIService()
     private var subscribers = Set<AnyCancellable>()
     private var searchResults: [SearchResult] = []
     @Published private var searchQuery = String()
     var emailID: String = ""
-    var symbols = ["IBM", "AAPL", "GOOGL", "AMZN", "NDAQ", "MSFT"]
+    var symbols = [""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -130,6 +135,7 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
                 vc.stockSymbol = selectedStock.symbol
                 vc.stockData = selectedStock
                 self.navigationController?.pushViewController(vc, animated: true)
+                self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             }
             tableView.deselectRow(at: indexPath, animated: true)
         }
@@ -149,5 +155,51 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     
- 
+    
+    @IBAction func addSymbolClicked(_ sender: Any) {
+        if let vc = storyboard?.instantiateViewController(identifier: "SearchTableViewController") as? SearchTableViewController {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    
+    @IBAction func editListClicked(_ sender: Any) {
+        tableView.setEditing(!tableView.isEditing, animated: true)
+        editList.setTitle(tableView.isEditing ? "Done" : "Edit", for: .normal)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                let symbolToRemove = searchResults[indexPath.row].symbol
+                searchResults.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+                removeFromWatchlist(symbol: symbolToRemove)
+            }
+        }
+    
+    private func removeFromWatchlist(symbol: String) {
+            guard let email = Auth.auth().currentUser?.email else {
+                print("Error: email is nil")
+                return
+            }
+            
+            let db = Firestore.firestore()
+            let docRef = db.collection("Watchlist").document(email)
+            
+            docRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    var watchlist = document.data()?["watchlist"] as? [String] ?? []
+                    if let index = watchlist.firstIndex(of: symbol) {
+                        watchlist.remove(at: index)
+                        docRef.updateData(["watchlist": watchlist]) { err in
+                            if let err = err {
+                                print("Error updating document: \(err)")
+                            } else {
+                                print("Document successfully updated")
+                            }
+                        }
+                    }
+                }
+            }
+        }
 }

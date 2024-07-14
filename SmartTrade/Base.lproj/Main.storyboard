@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2zi-wl-6TY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2zi-wl-6TY">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -444,12 +444,20 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foG-ge-Pgf">
-                                <rect key="frame" x="299" y="64" width="52" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foG-ge-Pgf">
+                                <rect key="frame" x="248" y="116" width="145" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="kA2-tu-Pp7"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Favourite" imagePadding="5" titleAlignment="leading">
+                                    <imageReference key="image" image="star" catalog="system" symbolScale="large"/>
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickStarIcon:" destination="iWJ-Go-7oa" eventType="touchUpInside" id="hSR-Nj-lgv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1wn-zA-KOa"/>
@@ -459,6 +467,7 @@
                             <constraint firstItem="JgT-Zg-52r" firstAttribute="leading" secondItem="r2A-aN-Ywf" secondAttribute="trailing" constant="24" id="5jr-9i-w60"/>
                             <constraint firstItem="gHq-mw-wsm" firstAttribute="centerX" secondItem="sl0-Kl-T6m" secondAttribute="centerX" constant="-243" id="70M-UG-buI"/>
                             <constraint firstItem="SnY-ne-kMB" firstAttribute="baseline" secondItem="gHq-mw-wsm" secondAttribute="baseline" id="8tg-O7-dPH"/>
+                            <constraint firstItem="foG-ge-Pgf" firstAttribute="trailing" secondItem="1wn-zA-KOa" secondAttribute="trailing" id="GRM-ad-4gd"/>
                             <constraint firstItem="rf4-tT-zzj" firstAttribute="firstBaseline" secondItem="JgT-Zg-52r" secondAttribute="firstBaseline" id="H4d-RM-JGE"/>
                             <constraint firstItem="gxR-fc-kaW" firstAttribute="leading" secondItem="Y1q-N6-14U" secondAttribute="leading" id="KQA-me-2JZ"/>
                             <constraint firstItem="1wn-zA-KOa" firstAttribute="trailing" secondItem="N4u-ar-Iga" secondAttribute="trailing" constant="21" id="LFV-bT-o6P"/>
@@ -474,12 +483,14 @@
                             <constraint firstItem="Y1q-N6-14U" firstAttribute="top" secondItem="1wn-zA-KOa" secondAttribute="top" constant="78" id="a1c-SI-x2s"/>
                             <constraint firstItem="kX3-lw-z2l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r2A-aN-Ywf" secondAttribute="leading" constant="-145" id="bhp-QZ-32C"/>
                             <constraint firstItem="rf4-tT-zzj" firstAttribute="baseline" secondItem="JgT-Zg-52r" secondAttribute="baseline" id="byD-Kc-oO2"/>
+                            <constraint firstItem="foG-ge-Pgf" firstAttribute="bottom" secondItem="Y1q-N6-14U" secondAttribute="bottom" constant="52" id="cuM-dq-CRz"/>
                             <constraint firstItem="kX3-lw-z2l" firstAttribute="trailing" secondItem="XEj-WI-wtF" secondAttribute="trailingMargin" id="dKT-24-c6I"/>
                             <constraint firstItem="r2A-aN-Ywf" firstAttribute="leading" secondItem="SnY-ne-kMB" secondAttribute="trailing" constant="21" id="ejR-Vu-5ey"/>
                             <constraint firstItem="N4u-ar-Iga" firstAttribute="leading" secondItem="0lB-DP-w7r" secondAttribute="trailing" constant="-7" id="hSZ-Ak-PN7"/>
                             <constraint firstItem="1wn-zA-KOa" firstAttribute="trailing" secondItem="0lB-DP-w7r" secondAttribute="trailing" constant="293" id="hd4-82-9i7"/>
                             <constraint firstItem="0lB-DP-w7r" firstAttribute="top" secondItem="1wn-zA-KOa" secondAttribute="top" constant="39" id="jVt-JS-kWa"/>
                             <constraint firstItem="SnY-ne-kMB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1wn-zA-KOa" secondAttribute="leading" id="lY3-d7-GSy"/>
+                            <constraint firstItem="foG-ge-Pgf" firstAttribute="leading" secondItem="Y1q-N6-14U" secondAttribute="trailing" constant="8" id="lqy-9W-San"/>
                             <constraint firstItem="N4u-ar-Iga" firstAttribute="firstBaseline" secondItem="0lB-DP-w7r" secondAttribute="firstBaseline" id="oLT-NL-A3C"/>
                             <constraint firstItem="1wn-zA-KOa" firstAttribute="trailing" secondItem="rf4-tT-zzj" secondAttribute="trailing" constant="16" id="p6R-Mn-0kT"/>
                             <constraint firstItem="SnY-ne-kMB" firstAttribute="baseline" secondItem="r2A-aN-Ywf" secondAttribute="baseline" id="qMN-MK-AvK"/>
@@ -499,6 +510,7 @@
                         <outlet property="oneMonth" destination="rf4-tT-zzj" id="8UV-Vv-Uv1"/>
                         <outlet property="oneWeek" destination="JgT-Zg-52r" id="8YG-nb-Ad8"/>
                         <outlet property="preTime" destination="Y1q-N6-14U" id="rQb-O2-zAm"/>
+                        <outlet property="starButton" destination="foG-ge-Pgf" id="yUe-8y-PfG"/>
                         <outlet property="stockFullname" destination="N4u-ar-Iga" id="98Z-ZB-HY4"/>
                         <outlet property="stockName" destination="0lB-DP-w7r" id="hOI-W7-IjX"/>
                         <outlet property="thirtyMintues" destination="gHq-mw-wsm" id="XFy-SQ-jjH"/>
@@ -1127,6 +1139,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="selectedImageTintColor" red="0.1058823529" green="0.73333333329999995" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
@@ -1168,6 +1181,9 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus.app" catalog="system" title=" Add Symbol"/>
+                                <connections>
+                                    <action selector="addSymbolClicked:" destination="mS5-r3-JEq" eventType="touchUpInside" id="dH1-fo-Zvw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irk-D9-tUU">
                                 <rect key="frame" x="322" y="112.99999999999999" width="55" height="34.333333333333329"/>
@@ -1180,6 +1196,9 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="pencil.and.list.clipboard" catalog="system" title=" Edit List" titleAlignment="center"/>
+                                <connections>
+                                    <action selector="editListClicked:" destination="mS5-r3-JEq" eventType="touchUpInside" id="D7f-A7-DGq"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9ZX-Na-2fp">
                                 <rect key="frame" x="16" y="149" width="361" height="548"/>
@@ -1300,6 +1319,8 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="iT4-j2-10z"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="addSymbol" destination="a4n-ab-lsg" id="7JW-SA-6VK"/>
+                        <outlet property="editList" destination="SRI-SS-3v7" id="GEj-zg-PwK"/>
                         <outlet property="searchButton" destination="lKZ-ef-YYI" id="mTj-Ls-ebA"/>
                         <outlet property="tableView" destination="9ZX-Na-2fp" id="ssX-i1-agV"/>
                     </connections>
@@ -1443,7 +1464,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Strategy" image="hand.thumbsup.fill" catalog="system" selectedImage="hand.thumbsup.fill" id="kns-AL-Pza">
-                        <color key="badgeColor" red="0.17486415029999999" green="0.1665100129" blue="0.2159682765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="badgeColor" red="0.082352941176470587" green="0.078431372549019607" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="newsSegmentView" destination="d76-hs-slu" id="g2B-rK-5P3"/>
