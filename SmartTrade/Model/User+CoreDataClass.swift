@@ -1,0 +1,15 @@
+//
+//  User+CoreDataClass.swift
+//  
+//
+//  Created by Frank Leung on 1/6/2024.
+//
+//
+
+import Foundation
+import CoreData
+
+@objc(User)
+public class User: NSManagedObject {
+
+}
