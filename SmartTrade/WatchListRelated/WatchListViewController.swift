@@ -56,6 +56,7 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
                 let lists = document.data()?["watchlist"] as? [String] ?? []
                 DispatchQueue.main.async {
                     self.symbols = lists
+                    self.searchResults.removeAll()
                     self.performSearch()
                 }
             } else {
@@ -66,6 +67,7 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
                     } else {
                         print("Document successfully written!")
                         DispatchQueue.main.async {
+                            self.searchResults.removeAll()
                             self.performSearch()
                         }
                     }

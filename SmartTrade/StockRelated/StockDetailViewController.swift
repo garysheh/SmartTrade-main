@@ -27,7 +27,8 @@ class StockDetailViewController: UIViewController {
     @IBOutlet weak var oneDay: UILabel!
     @IBOutlet weak var stockFullname: UILabel!
     @IBOutlet weak var oneHour: UILabel!
-    @IBOutlet weak var starIcon: UIImageView!
+    @IBOutlet weak var starButton: UIButton!
+    
     
     
     var stockSymbol: String?
@@ -417,6 +418,87 @@ class StockDetailViewController: UIViewController {
         }
 //        showSellOptionPopup()
     }
+    
+
+    
+    //add symbol stockSymbol
+    private func addSymbol() {
+        let db = Firestore.firestore()
+        guard let email = Auth.auth().currentUser?.email else {
+            print("Error: email is nil")
+            return
+        }
+        
+        db.collection("Watchlist").document(email).getDocument { (document, error) in
+            if let error = error {
+                print("Error getting document: \(error)")
+                return
+            }
+            
+            if let document = document, document.exists {
+                var lists = document.data()?["watchlist"] as? [String] ?? []
+                if !lists.contains(self.stockSymbol ?? "") {
+                    lists.append(self.stockSymbol ?? "")
+                    db.collection("Watchlist").document(email).updateData(["watchlist": lists]) { error in
+                        if let error = error {
+                            print("Error updating document: \(error)")
+                        } else {
+                            print("Document successfully updated")
+                        }
+                    }
+                } else {
+                    print("Stock symbol already in watchlist")
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     // Commented for testing and refactor to new controller
 
