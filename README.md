@@ -1,5 +1,13 @@
 # SmartTrade: Empowering Stock Trading Platform with Pairs Trading Algorithms and Machine Learning Insights
 
+## Introduction
+
+The University of Hong Kong MSc(CompSc) Project of 2023: msp23076
+
+For more information, please visit https://wp2023.cs.hku.hk/msp23076/ .
+
+Our project files are divided into two parts, one is “pairs_trading_with_machine_learning-master”, which Zikang Lin is responsible for developing and maintaining, and the other is “SmartTrade-main”, which LIANG Guoxun and SHE Jiayao are responsible for developing and maintaining. 
+
 ## Getting Started
 
 Our project SmartTrade App runs on the Xcode platform, and the programming language is mainly Swift and a few installation parts for Ruby. The simulator device is iPhone 15 Pro etc.  
