@@ -53,8 +53,9 @@ class StrategyViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     private func performSearch() {
-            let symbols = ["AWK", "PODD"]
-            let publishers = symbols.map { symbol -> AnyPublisher<(SearchResult?, [Double]), Error> in
+            let tradePairs = [["BIO", "ETSY"], ["FTNT", "JBHT"], ["AWK", "PODD"], ["IVZ", "MHK"], ["LH", "LYV"]]
+            guard let selectedPair = tradePairs.randomElement() else { return }
+            let publishers = selectedPair.map { symbol -> AnyPublisher<(SearchResult?, [Double]), Error> in
                 let symbolPublisher = apiService.fetchSymbolsPublisher(symbol: symbol)
                     .map { data -> SearchResult? in
                         if let searchResults = try? JSONDecoder().decode(SearchResults.self, from: data) {
