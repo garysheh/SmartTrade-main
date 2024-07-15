@@ -6,7 +6,7 @@ The University of Hong Kong MSc(CompSc) Project of 2023: msp23076
 
 For more information, please visit https://wp2023.cs.hku.hk/msp23076/ .
 
-Our project files are divided into two parts, one is “pairs_trading_with_machine_learning-master”, which Zikang Lin is responsible for developing and maintaining, and the other is “SmartTrade-main”, which LIANG Guoxun and SHE Jiayao are responsible for developing and maintaining. 
+Our project files are divided into two parts, one is “[pairs_trading_with_machine_learning-master](https://github.com/CooperLymn/pairs_trading_with_machine_learning/tree/master)”, which Zikang Lin is responsible for developing and maintaining, and the other is “[SmartTrade-main](https://github.com/LeungKwokFan/SmartTrade-main)”, which LIANG Guoxun and SHE Jiayao are responsible for developing and maintaining. 
 
 ## Getting Started
 
