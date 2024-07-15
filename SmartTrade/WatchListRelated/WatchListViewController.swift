@@ -130,14 +130,19 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            if let vc = storyboard?.instantiateViewController(withIdentifier: "StockDetailViewController") as? StockDetailViewController {
-                let selectedStock = searchResults[indexPath.row]
-                vc.stockSymbol = selectedStock.symbol
-                vc.stockData = selectedStock
-                self.navigationController?.pushViewController(vc, animated: true)
-                self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-            }
-            tableView.deselectRow(at: indexPath, animated: true)
+        guard indexPath.row < searchResults.count else {
+                    print("Index out of range: \(indexPath.row)")
+                    return
+                }
+                
+                if let vc = storyboard?.instantiateViewController(withIdentifier: "StockDetailViewController") as? StockDetailViewController {
+                    let selectedStock = searchResults[indexPath.row]
+                    vc.stockSymbol = selectedStock.symbol
+                    vc.stockData = selectedStock
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+                }
+                tableView.deselectRow(at: indexPath, animated: true)
         }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
@@ -165,7 +170,7 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBAction func editListClicked(_ sender: Any) {
         tableView.setEditing(!tableView.isEditing, animated: true)
-        editList.setTitle(tableView.isEditing ? "Done" : "Edit", for: .normal)
+        editList.setTitle(tableView.isEditing ? " Done" : " Edit List", for: .normal)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
