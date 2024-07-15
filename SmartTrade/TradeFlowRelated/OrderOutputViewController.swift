@@ -247,6 +247,10 @@ class OrderOutputViewController: UIViewController {
                         self.present(alert, animated: true, completion: nil)
                     }
                                                               }
+        }else{
+            let alert = UIAlertController(title: "Oops..", message: "Not a correct share amount! Please check the amount.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK👌", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -377,9 +381,9 @@ class OrderOutputViewController: UIViewController {
                     
                     DispatchQueue.main.async {
                         if let shares = self.holdingShare {
-                            self.outputTotalLabel.text = "\(shares) shares available"
+                            self.outputSharesForBottomLabel.text = "\(shares) shares available"
                         } else {
-                            self.outputTotalLabel.text = "No data available"
+                            self.outputSharesForBottomLabel.text = "No data available"
                         }
                     }
                 } else {
