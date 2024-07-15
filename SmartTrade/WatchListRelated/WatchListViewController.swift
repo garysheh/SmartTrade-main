@@ -81,9 +81,9 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
     
-    
+    // method reference:https://developer.apple.com/documentation/combine
     private func performSearch() {
-//            let symbols = ["IBM", "AAPL", "GOOGL", "AMZN", "NDAQ", "MSFT"]
+// test demo: let symbols = ["IBM", "AAPL", "GOOGL", "AMZN", "NDAQ", "MSFT"]
             let publishers = symbols.map { symbol -> AnyPublisher<(SearchResult?, [Double]), Error> in
                 let symbolPublisher = apiService.fetchSymbolsPublisher(symbol: symbol)
                     .map { data -> SearchResult? in
@@ -126,7 +126,7 @@ class WatchListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 85;//Choose your custom row height
+        return 85;// Row height
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

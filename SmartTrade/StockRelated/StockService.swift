@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+// method reference: https://developer.apple.com/documentation/foundation/urlsession
 struct APIService {
     
     var API_KEY: String {

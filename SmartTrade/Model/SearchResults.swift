@@ -5,6 +5,7 @@
 //  Created by Gary She on 2024/5/27.
 //
 
+// method reference: https://www.kodeco.com/3418439-encoding-and-decoding-in-swift#toc-anchor-004
 import Foundation
 
 struct SearchResults: Decodable {

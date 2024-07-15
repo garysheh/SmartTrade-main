@@ -40,7 +40,6 @@
 		60CBCA772C208FA500ABEA4B /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CBCA762C208FA500ABEA4B /* MyPageViewController.swift */; };
 		60F616022C2E581D00E4B702 /* PlaceSuccessfullyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F616012C2E581D00E4B702 /* PlaceSuccessfullyViewController.swift */; };
 		60F616042C2E583900E4B702 /* PlaceFailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F616032C2E583900E4B702 /* PlaceFailedViewController.swift */; };
-		60F616062C2E5E7C00E4B702 /* MainPageTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F616052C2E5E7C00E4B702 /* MainPageTabBarViewController.swift */; };
 		60F6161B2C40C75800E4B702 /* SpreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F6161A2C40C75800E4B702 /* SpreadViewController.swift */; };
 		60F6161D2C40CA3000E4B702 /* spread.csv in Resources */ = {isa = PBXBuildFile; fileRef = 60F6161C2C40CA3000E4B702 /* spread.csv */; };
 		7B0CFA922C3D2BE80034028E /* HistoryOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0CFA912C3D2BE80034028E /* HistoryOrderViewController.swift */; };
@@ -120,7 +119,6 @@
 		60CBCA762C208FA500ABEA4B /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		60F616012C2E581D00E4B702 /* PlaceSuccessfullyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSuccessfullyViewController.swift; sourceTree = "<group>"; };
 		60F616032C2E583900E4B702 /* PlaceFailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFailedViewController.swift; sourceTree = "<group>"; };
-		60F616052C2E5E7C00E4B702 /* MainPageTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTabBarViewController.swift; sourceTree = "<group>"; };
 		60F6161A2C40C75800E4B702 /* SpreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadViewController.swift; sourceTree = "<group>"; };
 		60F6161C2C40CA3000E4B702 /* spread.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spread.csv; sourceTree = "<group>"; };
 		7B0CFA912C3D2BE80034028E /* HistoryOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryOrderViewController.swift; sourceTree = "<group>"; };
@@ -301,7 +299,6 @@
 				60C193922BE07BFA003134FE /* Info.plist */,
 				7BFFB78F2BE0EAD000F6EE2A /* GoogleService-Info.plist */,
 				7BF759342C0B33AE000FE466 /* SmartTradeData.xcdatamodeld */,
-				60F616052C2E5E7C00E4B702 /* MainPageTabBarViewController.swift */,
 			);
 			path = SmartTrade;
 			sourceTree = "<group>";
@@ -514,7 +511,6 @@
 				60F616042C2E583900E4B702 /* PlaceFailedViewController.swift in Sources */,
 				601D193F2C2B2E0100A11E16 /* StrategyViewController.swift in Sources */,
 				609E47B32C2C454B0016372B /* RecommendedTableViewCell.swift in Sources */,
-				60F616062C2E5E7C00E4B702 /* MainPageTabBarViewController.swift in Sources */,
 				7BD7F49D2C425A1800A40552 /* NewsTableViewCell.swift in Sources */,
 				60F6161B2C40C75800E4B702 /* SpreadViewController.swift in Sources */,
 				60F616022C2E581D00E4B702 /* PlaceSuccessfullyViewController.swift in Sources */,

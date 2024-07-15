@@ -30,7 +30,8 @@ class SearchTableViewController: UITableViewController {
     private func setupNavigationBar() {
         navigationItem.searchController = searchController
     }
-    
+
+    // method reference: https://medium.com/ios-app-mastery/debounce-throttle-with-combine-3a13faddba95
     private func observeForm() {
         $searchQuery
             .debounce(for: .milliseconds(750), scheduler: RunLoop.main)
@@ -97,7 +98,7 @@ class SearchTableViewController: UITableViewController {
         }.store(in: &subscribers)
     }
 }
-
+// method: https://developer.apple.com/documentation/uikit/uisearchcontroller
 extension SearchTableViewController: UISearchResultsUpdating, UISearchControllerDelegate {
     func updateSearchResults(for searchController: UISearchController) {
         guard let query = searchController.searchBar.text, !query.isEmpty else {
