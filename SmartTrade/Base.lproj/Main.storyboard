@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2zi-wl-6TY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2zi-wl-6TY">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -326,38 +326,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Nu0-pW-ADg">
-                                <rect key="frame" x="16" y="696" width="171" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                                <color key="tintColor" red="0.1058823529" green="0.73333333329999995" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="BUY" titleAlignment="center">
-                                    <color key="baseBackgroundColor" red="0.1058823529" green="0.73333333329999995" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="BuyButtonTapped:" destination="iWJ-Go-7oa" eventType="touchUpInside" id="Sbj-r3-AU0"/>
-                                    <action selector="loginClicked:" destination="jl9-c1-cKv" eventType="touchUpInside" id="mZc-A2-Rjt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="sl0-Kl-T6m">
-                                <rect key="frame" x="201" y="696" width="171" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                                <color key="tintColor" red="0.1058823529" green="0.73333333329999995" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="SELL" titleAlignment="center">
-                                    <color key="baseBackgroundColor" red="0.94117647058823528" green="0.22352941176470587" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="SellButtonTapped:" destination="iWJ-Go-7oa" eventType="touchUpInside" id="zTL-18-GnC"/>
-                                    <action selector="loginClicked:" destination="jl9-c1-cKv" eventType="touchUpInside" id="iBV-Ec-5UF"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxR-fc-kaW">
-                                <rect key="frame" x="16" y="107" width="209" height="52"/>
+                                <rect key="frame" x="34" y="107" width="191" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="JmJ-ei-xEl"/>
                                 </constraints>
@@ -366,7 +336,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symbol" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lB-DP-w7r">
-                                <rect key="frame" x="16" y="39" width="84" height="40"/>
+                                <rect key="frame" x="34" y="39" width="66" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="I0F-do-yid"/>
                                 </constraints>
@@ -375,13 +345,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1q-N6-14U">
-                                <rect key="frame" x="16" y="78" width="224" height="21"/>
+                                <rect key="frame" x="34" y="78" width="206" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kX3-lw-z2l">
-                                <rect key="frame" x="16" y="167" width="361" height="426"/>
+                                <rect key="frame" x="34" y="167" width="343" height="426"/>
                                 <color key="backgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2A-aN-Ywf">
@@ -459,28 +429,59 @@
                                     <action selector="clickStarIcon:" destination="iWJ-Go-7oa" eventType="touchUpInside" id="hSR-Nj-lgv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="lgP-BJ-x2B">
+                                <rect key="frame" x="16" y="696" width="171" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <color key="tintColor" red="0.1058823529" green="0.73333333329999995" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="BUY" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                    <color key="baseBackgroundColor" red="0.1058823529" green="0.73333333329999995" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="BuyButtonTapped:" destination="iWJ-Go-7oa" eventType="touchUpInside" id="cKL-VF-xeV"/>
+                                    <action selector="loginClicked:" destination="jl9-c1-cKv" eventType="touchUpInside" id="Xbo-V9-Ppi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Luu-Zw-0kC">
+                                <rect key="frame" x="206" y="696" width="171" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <color key="tintColor" red="0.1058823529" green="0.73333333329999995" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="SELL" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                    <color key="baseBackgroundColor" red="0.94117647059999998" green="0.22352941179999999" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="SellButtonTapped:" destination="iWJ-Go-7oa" eventType="touchUpInside" id="GvZ-od-9Bg"/>
+                                    <action selector="loginClicked:" destination="jl9-c1-cKv" eventType="touchUpInside" id="AVq-67-FD5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1wn-zA-KOa"/>
                         <color key="backgroundColor" red="0.082352941176470587" green="0.078431372549019607" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kX3-lw-z2l" firstAttribute="leading" secondItem="gxR-fc-kaW" secondAttribute="leading" id="3yX-9W-ULS"/>
                             <constraint firstItem="JgT-Zg-52r" firstAttribute="leading" secondItem="r2A-aN-Ywf" secondAttribute="trailing" constant="24" id="5jr-9i-w60"/>
-                            <constraint firstItem="gHq-mw-wsm" firstAttribute="centerX" secondItem="sl0-Kl-T6m" secondAttribute="centerX" constant="-243" id="70M-UG-buI"/>
                             <constraint firstItem="SnY-ne-kMB" firstAttribute="baseline" secondItem="gHq-mw-wsm" secondAttribute="baseline" id="8tg-O7-dPH"/>
                             <constraint firstItem="foG-ge-Pgf" firstAttribute="trailing" secondItem="1wn-zA-KOa" secondAttribute="trailing" id="GRM-ad-4gd"/>
                             <constraint firstItem="rf4-tT-zzj" firstAttribute="firstBaseline" secondItem="JgT-Zg-52r" secondAttribute="firstBaseline" id="H4d-RM-JGE"/>
                             <constraint firstItem="gxR-fc-kaW" firstAttribute="leading" secondItem="Y1q-N6-14U" secondAttribute="leading" id="KQA-me-2JZ"/>
+                            <constraint firstItem="lgP-BJ-x2B" firstAttribute="top" secondItem="gHq-mw-wsm" secondAttribute="bottom" constant="53" id="LDB-1R-bmK"/>
                             <constraint firstItem="1wn-zA-KOa" firstAttribute="trailing" secondItem="N4u-ar-Iga" secondAttribute="trailing" constant="21" id="LFV-bT-o6P"/>
                             <constraint firstItem="1wn-zA-KOa" firstAttribute="trailing" secondItem="gxR-fc-kaW" secondAttribute="trailing" constant="168" id="Lqh-RI-Uox"/>
-                            <constraint firstItem="Nu0-pW-ADg" firstAttribute="top" secondItem="gHq-mw-wsm" secondAttribute="bottom" constant="53" id="P1C-3T-UCr"/>
                             <constraint firstItem="SnY-ne-kMB" firstAttribute="centerY" secondItem="gHq-mw-wsm" secondAttribute="centerY" id="QWZ-T9-uCz"/>
                             <constraint firstItem="SnY-ne-kMB" firstAttribute="centerY" secondItem="r2A-aN-Ywf" secondAttribute="centerY" id="ReS-l5-4Pl"/>
                             <constraint firstItem="0lB-DP-w7r" firstAttribute="leading" secondItem="Y1q-N6-14U" secondAttribute="leading" id="Sl0-yR-lXY"/>
                             <constraint firstItem="rf4-tT-zzj" firstAttribute="leading" secondItem="JgT-Zg-52r" secondAttribute="trailing" constant="27" id="T0p-Fc-379"/>
                             <constraint firstItem="gxR-fc-kaW" firstAttribute="top" secondItem="Y1q-N6-14U" secondAttribute="bottom" constant="8" id="VhS-q2-Jgc"/>
-                            <constraint firstItem="0lB-DP-w7r" firstAttribute="leading" secondItem="Nu0-pW-ADg" secondAttribute="leading" id="Wiq-iB-ZXG"/>
                             <constraint firstItem="SnY-ne-kMB" firstAttribute="baseline" secondItem="JgT-Zg-52r" secondAttribute="baseline" id="Ylu-S0-Tit"/>
                             <constraint firstItem="Y1q-N6-14U" firstAttribute="top" secondItem="1wn-zA-KOa" secondAttribute="top" constant="78" id="a1c-SI-x2s"/>
+                            <constraint firstItem="gHq-mw-wsm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lgP-BJ-x2B" secondAttribute="leading" id="aLl-dK-1pP"/>
                             <constraint firstItem="kX3-lw-z2l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r2A-aN-Ywf" secondAttribute="leading" constant="-145" id="bhp-QZ-32C"/>
                             <constraint firstItem="rf4-tT-zzj" firstAttribute="baseline" secondItem="JgT-Zg-52r" secondAttribute="baseline" id="byD-Kc-oO2"/>
                             <constraint firstItem="foG-ge-Pgf" firstAttribute="bottom" secondItem="Y1q-N6-14U" secondAttribute="bottom" constant="52" id="cuM-dq-CRz"/>
@@ -488,6 +489,7 @@
                             <constraint firstItem="r2A-aN-Ywf" firstAttribute="leading" secondItem="SnY-ne-kMB" secondAttribute="trailing" constant="21" id="ejR-Vu-5ey"/>
                             <constraint firstItem="N4u-ar-Iga" firstAttribute="leading" secondItem="0lB-DP-w7r" secondAttribute="trailing" constant="-7" id="hSZ-Ak-PN7"/>
                             <constraint firstItem="1wn-zA-KOa" firstAttribute="trailing" secondItem="0lB-DP-w7r" secondAttribute="trailing" constant="293" id="hd4-82-9i7"/>
+                            <constraint firstItem="SnY-ne-kMB" firstAttribute="leading" secondItem="gHq-mw-wsm" secondAttribute="trailing" constant="16" id="ilx-LT-htn"/>
                             <constraint firstItem="0lB-DP-w7r" firstAttribute="top" secondItem="1wn-zA-KOa" secondAttribute="top" constant="39" id="jVt-JS-kWa"/>
                             <constraint firstItem="SnY-ne-kMB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1wn-zA-KOa" secondAttribute="leading" id="lY3-d7-GSy"/>
                             <constraint firstItem="foG-ge-Pgf" firstAttribute="leading" secondItem="Y1q-N6-14U" secondAttribute="trailing" constant="8" id="lqy-9W-San"/>
@@ -502,8 +504,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="0Vi-1y-qKr"/>
                     <connections>
-                        <outlet property="BuyButton" destination="Nu0-pW-ADg" id="TC8-EB-jM2"/>
-                        <outlet property="SellButton" destination="sl0-Kl-T6m" id="f5f-K2-neb"/>
+                        <outlet property="BuyButton" destination="lgP-BJ-x2B" id="aKd-Wh-Vye"/>
+                        <outlet property="SellButton" destination="Luu-Zw-0kC" id="a5f-0g-CFT"/>
                         <outlet property="Stockprice" destination="gxR-fc-kaW" id="J03-Wi-PsJ"/>
                         <outlet property="oneDay" destination="r2A-aN-Ywf" id="9vR-aX-toq"/>
                         <outlet property="oneHour" destination="SnY-ne-kMB" id="l51-bd-oIk"/>

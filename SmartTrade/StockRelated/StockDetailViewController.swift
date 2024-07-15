@@ -41,6 +41,8 @@ class StockDetailViewController: UIViewController {
             if let stockSymbol = stockSymbol {
                 fetchStockDetails(for: stockSymbol)
             }
+            BuyButton.titleLabel?.textAlignment = .center
+            SellButton.titleLabel?.textAlignment = .center
             updateStarIcon()
         }
         
