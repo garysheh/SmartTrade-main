@@ -81,7 +81,7 @@ class NewsDetailedViewController: UIViewController {
                             }
                         } else {
                             DispatchQueue.main.async {
-                                                    let alert = UIAlertController(title: "Oops..", message: "Try again!", preferredStyle: .alert)
+                                                    let alert = UIAlertController(title: "Model initializing...", message: "Try again later like 5 seconds later.", preferredStyle: .alert)
                                                     alert.addAction(UIAlertAction(title: "Alright", style: .default, handler: nil))
                                                     self.present(alert, animated: true, completion: nil)
                                                 }
