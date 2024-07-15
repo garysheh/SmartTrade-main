@@ -20,9 +20,13 @@ Open the terminal and navigate to the project's root directory where the Podfile
 cd /path/to/your/project
 ```
 Create the Podfile:
+```
 pod init
+```
 Then open the Podfile for editing:
+```
 open Podfile
+```
 Replace the contents of the Podfile with the following (Ruby):
 
 ```ruby
